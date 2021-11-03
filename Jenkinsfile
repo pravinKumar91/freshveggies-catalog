@@ -9,4 +9,7 @@ node {
   stage('Compile-Package'){
     bat 'mvn package';
   }
+  stage('Email Notification'){
+    mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'Jenkin Maven Clean Package', to: 'pravinkumarwanare@gmai.com';
+  }
 }
