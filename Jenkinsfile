@@ -3,7 +3,8 @@ node {
     git 'https://github.com/pravinKumar91/freshveggies-catalog';
   }
   stage('Clean-Package'){
-    bat 'mvn clean';
+    def mvnHome = tool name: 'Maven3', type: 'maven';
+    bat "${mvHome}/bin/mvn clean";
   }
   stage('Compile-Package'){
     bat 'mvn package';
