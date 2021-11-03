@@ -3,6 +3,6 @@ node {
     git 'https://github.com/pravinKumar91/freshveggies-catalog';
   }
   stage('Compile-Package'){
-    sh 'mvn package';
+    bat 'mvn package';
   }
 }
