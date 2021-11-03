@@ -10,6 +10,11 @@ node {
     bat 'mvn package';
   }
   stage('Email Notification'){
-    mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'Jenkin Maven Clean Package', to: 'pravinkumarwanare@gmai.com';
+    mail bcc: '', body: '''Hello Pravin,
+
+Job is successfully executed for maven clean package.
+
+Thanks,
+System''', cc: '', from: '', replyTo: '', subject: 'Jenkins Maven clean package Notification', to: 'pravinkumarwanare@gmail.com'
   }
 }
